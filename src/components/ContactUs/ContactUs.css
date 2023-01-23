@@ -1,0 +1,44 @@
+@font-face {
+  font-family: "Poppins-light";
+  src: url("C:\Users\Digitask\Desktop\Test Project\my-app\src\assets\fonts\Poppins-Light.ttf");
+}
+
+.contact-us-container {
+  height: 25vh;
+  background-color: rgb(16, 22, 47);
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.contact-us-information {
+  text-align: center;
+  color: white;
+}
+
+.social-media-icon {
+  width: 40px;
+  height: 40px;
+  margin: 5px;
+}
+
+.pages-shortcut {
+  list-style: none;
+  text-align: center;
+}
+
+.page-shortcut {
+  color: white;
+  padding: 2px 0;
+  font-family: "Poppins-light";
+}
+
+.page-shortcut-hash-link {
+  text-decoration: none;
+}
+
+.page-shortcut:hover {
+  cursor: pointer;
+  color: rgb(253, 216, 189);
+}

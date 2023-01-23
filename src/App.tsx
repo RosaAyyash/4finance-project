@@ -1,25 +1,37 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { createTheme, ThemeProvider } from "@mui/material";
+
+import { Route, Routes } from "react-router";
+import { BrowserRouter } from "react-router-dom";
+import "./App.css";
+
+//Pages
+import CoursePage from "./pages/CoursePage/CoursePage";
+import CoursesPage from "./pages/CoursesPage/CoursesPage";
+import Homepage from "./pages/Homepage/Homepage";
+import InstructorPage from "./pages/InstructorsPage/InstructorPage";
+
+const THEME = createTheme({
+  typography: {
+    fontFamily: "Poppins",
+  },
+});
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={THEME}>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Homepage />} />
+          <Route path="/instructors" element={<InstructorPage />} />
+          <Route
+            path="instructors/:instructorId"
+            element={<InstructorPage />}
+          />
+          <Route path="/courses" element={<CoursesPage />} />
+          <Route path="/courses/:courseId" element={<CoursePage />} />
+        </Routes>
+      </BrowserRouter>
+    </ThemeProvider>
   );
 }
 

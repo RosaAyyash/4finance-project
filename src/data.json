@@ -1,0 +1,117 @@
+{
+  "instructors": [
+    {
+      "id": 1,
+      "name": "Person 1",
+      "email": "rozie.ayyash2002@gmail.com",
+      "speciality": "Accouting",
+      "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed sed risus pretium quam vulputate dignissim. Odio eu feugiat pretium nibh ipsum consequat. Consequat id porta nibh venenatis cras sed felis eget. Ut pharetra sit amet aliquam id diam maecenas. Nibh tellus molestie nunc non blandit.",
+      "image": "/Instructors/profileA.jpg",
+      "phoneNumber": 76125766
+    },
+    {
+      "id": 2,
+      "name": "Person 2",
+      "email": "rozie.ayyash2002@gmail.com",
+      "speciality": "Human Resources",
+      "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed sed risus pretium quam vulputate dignissim. Odio eu feugiat pretium nibh ipsum consequat. Consequat id porta nibh venenatis cras sed felis eget. Ut pharetra sit amet aliquam id diam maecenas. Nibh tellus molestie nunc non blandit.",
+      "image": "/Instructors/profileB.jpg",
+      "phoneNumber": 70737189
+    },
+    {
+      "id": 3,
+      "name": "Person 3",
+      "email": "rozie.ayyash2002@gmail.com",
+      "speciality": "Web Development",
+      "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed sed risus pretium quam vulputate dignissim. Odio eu feugiat pretium nibh ipsum consequat. Consequat id porta nibh venenatis cras sed felis eget. Ut pharetra sit amet aliquam id diam maecenas. Nibh tellus molestie nunc non blandit.",
+      "image": "/Instructors/profileC.jpg",
+      "phoneNumber": 76584210
+    },
+    {
+      "id": 4,
+      "name": "Person 4",
+      "email": "rozie.ayyash2002@gmail.com",
+      "speciality": "Nursing",
+      "bio": "",
+      "image": "/Instructors/profileA.jpg",
+      "phoneNumber": 76125766
+    },
+    {
+      "id": 5,
+      "name": "Person 5",
+      "email": "rozie.ayyash2002@gmail.com",
+      "speciality": "Graphic Design",
+      "bio": "",
+      "image": "/Instructors/profileB.jpg",
+      "phoneNumber": 76125766
+    }
+  ],
+  "courses": [
+    {
+      "id": 1,
+      "name": "Coding and Web Development",
+      "description": "This introductory Coding course presents the basic principles of programming, including algorithms and logic. Students will engage in various programming interactivities that will reinforce their learning and understanding. This course also guides students as they are asked to write and test their own code, just as programmers in the field do. The topics of the hands-on projects include: HTML Website Analysis, JavaScript, and Python.",
+      "outline": [
+        { "topic": "Accounting", "instructor": "Rosa" },
+        { "topic": "Office Management", "instructor": "Rita" },
+        { "topic": "Life Skills", "instructor": "Ramez" }
+      ],
+      "startDate": "5 September 2022",
+      "registrationDate": "1 August 2022 - 31 August 2022",
+      "majors": ["Computer Science", "CCE", "CCNE", "IT", "Natural Sciences"],
+      "image": "/Courses/coding.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Human Resources and Office Management",
+      "description": "This essential HR training course provides a comprehensive and solid foundation in human resource management. It covers the different functional areas that comprise the field of Human Resource Management, including human resource planning, recruitment & selection, compensation & benefits, performance appraisal and training & development.",
+      "outline": [
+        { "topic": "Accounting", "instructor": "Rosa" },
+        { "topic": "Office Management", "instructor": "Rita" },
+        { "topic": "Life Skills", "instructor": "Ramez" }
+      ],
+      "startDate": "1 December 2022",
+      "registrationDate": "1 November 2022 - 30 November 2022",
+      "majors": ["Business", "HR", "Accounting", "Banking"],
+      "image": "/Courses/HR.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Human Resources and Office Management",
+      "description": "This essential HR training course provides a comprehensive and solid foundation in human resource management. It covers the different functional areas that comprise the field of Human Resource Management, including human resource planning, recruitment & selection, compensation & benefits, performance appraisal and training & development.",
+      "outline": [
+        { "topic": "Accounting", "instructor": "Rosa" },
+        { "topic": "Office Management", "instructor": "Rita" },
+        { "topic": "Life Skills", "instructor": "Ramez" }
+      ],
+      "startDate": "1 December 2022",
+      "registrationDate": "1 November 2022 - 30 November 2022",
+      "majors": ["Business", "HR", "Accounting", "Banking"],
+      "image": "/Courses/HR.jpg"
+    },
+    {
+      "id": 4,
+      "name": "",
+      "description": "",
+      "instructors": "",
+      "startDate": "",
+      "registrationDate": "",
+      "majors": ""
+    },
+    {
+      "id": 5,
+      "name": "",
+      "description": "",
+      "instructors": "",
+      "startDate": "",
+      "registrationDate": "",
+      "majors": ""
+    }
+  ],
+  "slideShow": [
+    "/slideShowImages/laptop.jpg",
+    "/slideShowImages/laptops.jpg",
+    "/slideShowImages/study.jpg",
+    "/slideShowImages/laptop.jpg"
+  ]
+}

@@ -1,0 +1,39 @@
+.course-title {
+  text-align: center;
+  font-size: 25px;
+}
+
+.selected-course-content {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.right-side-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
+}
+.selected-course-image {
+  width: 400px;
+  height: 400px;
+  margin-bottom: 20px;
+}
+
+.left-side-content {
+  width: 50%;
+}
+
+.course-timing {
+  text-align: center;
+  margin: 2px;
+}
+
+.course-description {
+  font-family: "Poppins-light";
+  text-align: justify;
+}
+
+.topic-list-item {
+  font-family: "Poppins-light";
+}

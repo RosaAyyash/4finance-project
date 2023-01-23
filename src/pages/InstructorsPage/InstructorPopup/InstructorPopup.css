@@ -1,0 +1,73 @@
+.instructor-popup-container {
+  overflow: hidden;
+}
+
+.instructor-popup-content {
+  width: 800px;
+  height: 450px;
+  border-radius: 20px;
+  background-color: white;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10000;
+  padding: 20px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.instructor-image {
+  height: 350px;
+  width: 350px;
+  margin-right: 30px;
+  width: auto;
+}
+
+.instructor-popup-overlay {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 11;
+  background-color: antiquewhite;
+  opacity: 0.8;
+}
+
+.instructor-name {
+  font-size: 32px;
+  height: 40px;
+}
+
+.instructor-speciality {
+  font-size: 20px;
+  height: 30px;
+}
+
+.instructor-bio {
+  text-align: justify;
+  font-family: "Poppins-light";
+  font-size: 15px;
+  height: 180px;
+}
+
+.instructor-contact-container {
+  display: flex;
+  align-items: center;
+  height: 30px;
+}
+
+.contact-icon {
+  width: 20px;
+  height: 20px;
+  margin: 5px;
+}
+
+.instructor-contact-info {
+  font-family: "Poppins-light";
+  font-size: 15px;
+  margin: 0;
+}

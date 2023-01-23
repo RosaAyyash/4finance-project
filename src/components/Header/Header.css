@@ -1,0 +1,37 @@
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  /* color: rgb(255, 240, 229);
+  height: 10px; */
+}
+
+.logo-image {
+  width: 70px;
+  height: 70px;
+  margin: 10px 20px;
+}
+
+.logo-image {
+  cursor: pointer;
+}
+.nav-bar-list {
+  display: flex;
+}
+.nav-bar-item {
+  list-style: none;
+  color: black;
+  padding: 0 15px;
+}
+
+.nav-bar-item:hover {
+  color: white;
+  cursor: pointer;
+}
+
+.nav-bar-item-hashlink {
+  text-decoration: none;
+}

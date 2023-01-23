@@ -1,0 +1,36 @@
+.course-card-container {
+  width: 350px;
+  height: 450px;
+  margin: 5px;
+  border-radius: 10px;
+  text-align: center;
+  background-color: rgb(253, 216, 189);
+}
+
+.course-card-container:hover,
+.course-image:hover {
+  cursor: pointer;
+  transform: scale(1.01, 1.01);
+}
+
+.course-image {
+  width: 350px;
+  height: 350px;
+  z-index: 0;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.course-name {
+  margin: 0px;
+  padding: 0px;
+}
+
+.course-details {
+  top: 0;
+  margin: 0px;
+  padding: 0px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+}
