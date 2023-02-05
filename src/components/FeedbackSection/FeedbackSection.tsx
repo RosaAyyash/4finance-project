@@ -1,15 +1,14 @@
-import "./InstructorsSection.css";
+import "./FeedbackSection.css";
+import { useState } from "react";
 import data from "../../data.json";
-import ProfileCard from "../ProfileCard/ProfileCard";
 
 //Vectors
 import LeftArrow from "../../assets/Vectors/Polygon 1.png";
 import RightArrow from "../../assets/Vectors/Polygon 2.png";
+import FeedbackCard from "./FeedbackCard/FeedbackCard";
 
-import { useState } from "react";
-
-function InstructorsSection() {
-  const instructors = data["instructors"];
+function FeedbackSection() {
+  const feedbacks = data["feedbacks"];
 
   const [displayed, setDisplayed] = useState(3);
 
@@ -20,11 +19,10 @@ function InstructorsSection() {
   const handleRightSwipe = () => {
     setDisplayed(displayed + 1);
   };
-
   return (
-    <div className="instructors-section-container">
-      <h1 className="section-title">Our Instructors</h1>
-      <div className="instructor-cards-container">
+    <div className="feedback-section-container">
+      <h1 className="section-title">Feedbacks</h1>
+      <div className="feedback-section-carousel">
         <>
           {displayed > 3 ? (
             <img
@@ -37,20 +35,18 @@ function InstructorsSection() {
             <img className="arrow-vector" src={LeftArrow} alt="Swipe Left" />
           )}
 
-          {instructors
+          {feedbacks
             .slice(displayed - 3, displayed)
-            .map((instructor: any, index: number) => (
-              <ProfileCard
-                id={instructor.id}
+            .map((feedback: any, index: number) => (
+              <FeedbackCard
                 key={index}
-                name={instructor.name}
-                email={instructor.email}
-                image={instructor.image}
-                phoneNumber={instructor.phoneNumber}
-                speciality={instructor.speciality}
+                StarNumbers={feedback.starNumber}
+                feedback={feedback.feedback}
+                author={feedback.author}
               />
             ))}
-          {displayed < instructors.length ? (
+
+          {displayed < feedbacks.length ? (
             <img
               className="arrow-vector"
               src={RightArrow}
@@ -66,4 +62,4 @@ function InstructorsSection() {
   );
 }
 
-export default InstructorsSection;
+export default FeedbackSection;

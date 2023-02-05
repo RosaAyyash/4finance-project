@@ -1,44 +1,54 @@
-@font-face {
-  font-family: "Poppins-light";
-  src: url("C:\Users\Digitask\Desktop\Test Project\my-app\src\assets\fonts\Poppins-Light.ttf");
+.contact-us-visit-us-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
 }
 
 .contact-us-container {
-  height: 25vh;
-  background-color: rgb(16, 22, 47);
-
+  width: 45%;
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
   align-items: center;
 }
 
-.contact-us-information {
-  text-align: center;
+.text-field-contact-us {
+  width: 70%;
+  margin: 10px 0 !important;
+  background-color: rgba(223, 218, 218, 0.5);
+  outline-color: rgb(235, 114, 97);
+}
+
+.submit-button {
+  width: 70%;
+  height: 50px;
+  margin: 30px 0;
   color: white;
+  background-color: rgb(235, 114, 97);
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.social-media-icon {
-  width: 40px;
-  height: 40px;
-  margin: 5px;
-}
-
-.pages-shortcut {
-  list-style: none;
-  text-align: center;
-}
-
-.page-shortcut {
-  color: white;
-  padding: 2px 0;
-  font-family: "Poppins-light";
-}
-
-.page-shortcut-hash-link {
-  text-decoration: none;
-}
-
-.page-shortcut:hover {
+.submit-button:hover {
   cursor: pointer;
-  color: rgb(253, 216, 189);
+  background-color: rgb(206, 81, 64);
+}
+
+.visit-us-container {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.map-image {
+  width: 80%;
+  height: 300px;
+  margin-top: 10px;
+}
+
+.map-image:hover {
+  cursor: pointer;
+  transform: scale(1.01, 1.01);
 }

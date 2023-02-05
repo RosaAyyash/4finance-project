@@ -1,0 +1,28 @@
+.feedback-card-container {
+  text-align: center;
+  width: 600px;
+  height: 350px;
+  background-color: rgb(223, 218, 218);
+  margin: 10px;
+  padding: 20px;
+}
+
+.rating-stars-container {
+  display: flex;
+  justify-content: center;
+  height: 30px;
+}
+
+.rating-paragraph {
+  font-family: "Poppins-light";
+  font-size: 11px;
+  height: 250px;
+}
+
+.star-vector {
+  width: 20px;
+}
+
+.feedback-author {
+  font-size: 15px;
+}

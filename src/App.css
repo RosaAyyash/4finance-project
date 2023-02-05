@@ -5,14 +5,21 @@
   font-weight: 400;
 }
 
+@font-face {
+  font-family: "Poppins-medium";
+  src: url("C:\Users\Digitask\Desktop\Test Project\my-app\src\assets\fonts\Poppins-Medium.ttf");
+}
+
 body {
   font-family: "Poppins";
-  background-color: rgb(255, 240, 229);
+  background-color: white;
 }
 
 .section-title {
-  font-size: 35px;
-  text-align: center;
+  margin-top: 50px;
+  margin-left: 50px;
+  font-size: 34px;
+  text-align: left;
 }
 
 .page-title {
@@ -23,6 +30,10 @@ body {
 }
 
 .see-more-button {
-  text-align: center;
-  margin: 10px 0 30px 0;
+  color: rgb(235, 114, 97);
+  padding: 10px 30px;
+}
+
+.see-more-button:hover {
+  cursor: pointer;
 }

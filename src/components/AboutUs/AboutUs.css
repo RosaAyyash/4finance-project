@@ -1,3 +1,22 @@
+@font-face {
+  font-family: "Poppins-light";
+  src: url("C:\Users\Digitask\Desktop\Test Project\my-app\src\assets\fonts\Poppins-Light.ttf");
+}
+
+.about-us-container {
+  margin-top: 60px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.about-us-title {
+  font-size: 34px;
+  width: 250px;
+  text-align: center;
+}
 .about-us-text {
+  font-family: "Poppins-light";
+  text-align: justify;
   padding: 10px 30px;
+  width: 800px;
 }

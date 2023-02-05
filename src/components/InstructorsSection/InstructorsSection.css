@@ -1,4 +1,10 @@
 .instructor-cards-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  align-items: center;
+}
+
+.arrow-vector {
+  height: 50px;
+  margin: 50px;
 }

@@ -49,7 +49,7 @@
   "courses": [
     {
       "id": 1,
-      "name": "Coding and Web Development",
+      "name": "Project Management",
       "description": "This introductory Coding course presents the basic principles of programming, including algorithms and logic. Students will engage in various programming interactivities that will reinforce their learning and understanding. This course also guides students as they are asked to write and test their own code, just as programmers in the field do. The topics of the hands-on projects include: HTML Website Analysis, JavaScript, and Python.",
       "outline": [
         { "topic": "Accounting", "instructor": "Rosa" },
@@ -59,11 +59,11 @@
       "startDate": "5 September 2022",
       "registrationDate": "1 August 2022 - 31 August 2022",
       "majors": ["Computer Science", "CCE", "CCNE", "IT", "Natural Sciences"],
-      "image": "/Courses/coding.jpg"
+      "image": "/Courses/projectManagement.png"
     },
     {
       "id": 2,
-      "name": "Human Resources and Office Management",
+      "name": "Accounting",
       "description": "This essential HR training course provides a comprehensive and solid foundation in human resource management. It covers the different functional areas that comprise the field of Human Resource Management, including human resource planning, recruitment & selection, compensation & benefits, performance appraisal and training & development.",
       "outline": [
         { "topic": "Accounting", "instructor": "Rosa" },
@@ -73,11 +73,11 @@
       "startDate": "1 December 2022",
       "registrationDate": "1 November 2022 - 30 November 2022",
       "majors": ["Business", "HR", "Accounting", "Banking"],
-      "image": "/Courses/HR.jpg"
+      "image": "/Courses/accounting.png"
     },
     {
       "id": 3,
-      "name": "Human Resources and Office Management",
+      "name": "Graphic Design",
       "description": "This essential HR training course provides a comprehensive and solid foundation in human resource management. It covers the different functional areas that comprise the field of Human Resource Management, including human resource planning, recruitment & selection, compensation & benefits, performance appraisal and training & development.",
       "outline": [
         { "topic": "Accounting", "instructor": "Rosa" },
@@ -87,25 +87,97 @@
       "startDate": "1 December 2022",
       "registrationDate": "1 November 2022 - 30 November 2022",
       "majors": ["Business", "HR", "Accounting", "Banking"],
-      "image": "/Courses/HR.jpg"
+      "image": "/Courses/graphicDesign.png"
     },
     {
       "id": 4,
-      "name": "",
+      "name": "Digital Marketing",
       "description": "",
       "instructors": "",
       "startDate": "",
       "registrationDate": "",
-      "majors": ""
+      "majors": "",
+      "image": "/Courses/digitalMarketing.png"
     },
     {
       "id": 5,
-      "name": "",
+      "name": "Business Ethics",
       "description": "",
       "instructors": "",
       "startDate": "",
       "registrationDate": "",
-      "majors": ""
+      "majors": "",
+      "image": "/Courses/businessEthics.png"
+    },
+    {
+      "id": 6,
+      "name": "Human Resources",
+      "description": "",
+      "instructors": "",
+      "startDate": "",
+      "registrationDate": "",
+      "majors": "",
+      "image": "/Courses/humanResources.png"
+    },
+    {
+      "id": 7,
+      "name": "Project Management",
+      "description": "This introductory Coding course presents the basic principles of programming, including algorithms and logic. Students will engage in various programming interactivities that will reinforce their learning and understanding. This course also guides students as they are asked to write and test their own code, just as programmers in the field do. The topics of the hands-on projects include: HTML Website Analysis, JavaScript, and Python.",
+      "outline": [
+        { "topic": "Accounting", "instructor": "Rosa" },
+        { "topic": "Office Management", "instructor": "Rita" },
+        { "topic": "Life Skills", "instructor": "Ramez" }
+      ],
+      "startDate": "5 September 2022",
+      "registrationDate": "1 August 2022 - 31 August 2022",
+      "majors": ["Computer Science", "CCE", "CCNE", "IT", "Natural Sciences"],
+      "image": "/Courses/projectManagement.png"
+    },
+    {
+      "id": 8,
+      "name": "Accounting",
+      "description": "This essential HR training course provides a comprehensive and solid foundation in human resource management. It covers the different functional areas that comprise the field of Human Resource Management, including human resource planning, recruitment & selection, compensation & benefits, performance appraisal and training & development.",
+      "outline": [
+        { "topic": "Accounting", "instructor": "Rosa" },
+        { "topic": "Office Management", "instructor": "Rita" },
+        { "topic": "Life Skills", "instructor": "Ramez" }
+      ],
+      "startDate": "1 December 2022",
+      "registrationDate": "1 November 2022 - 30 November 2022",
+      "majors": ["Business", "HR", "Accounting", "Banking"],
+      "image": "/Courses/accounting.png"
+    }
+  ],
+  "feedbacks": [
+    {
+      "starNumber": 4,
+      "feedback": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Risus quis varius quam quisque id. Morbi quis commodo odio aenean sed adipiscing diam donec adipiscing. Ultricies tristique nulla aliquet enim tortor at auctor urna nunc. Volutpat commodo sed egestas egestas fringilla phasellus faucibus. Lobortis feugiat vivamus at augue. Ac auctor augue mauris augue neque gravida in fermentum. Neque gravida in fermentum et sollicitudin ac orci. Aliquam etiam erat velit scelerisque in dictum non. Ac orci phasellus egestas tellus rutrum. ",
+      "author": "Rosa Ayyash"
+    },
+    {
+      "starNumber": 5,
+      "feedback": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Risus quis varius quam quisque id. Morbi quis commodo odio aenean sed adipiscing diam donec adipiscing. Ultricies tristique nulla aliquet enim tortor at auctor urna nunc. Volutpat commodo sed egestas egestas fringilla phasellus faucibus. Lobortis feugiat vivamus at augue. Ac auctor augue mauris augue neque gravida in fermentum. Neque gravida in fermentum et sollicitudin ac orci.",
+      "author": "Nawal Hassan"
+    },
+    {
+      "starNumber": 3,
+      "feedback": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Risus quis varius quam quisque id. Morbi quis commodo odio aenean sed adipiscing diam donec adipiscing. Ultricies tristique nulla aliquet enim tortor at auctor urna nunc. Volutpat commodo sed egestas egestas fringilla phasellus faucibus. Lobortis feugiat vivamus at augue. Ac auctor augue mauris augue neque gravida in fermentum. Neque gravida in fermentum et sollicitudin ac orci. Aliquam etiam erat velit scelerisque in dictum non. Ac orci phasellus egestas tellus rutrum. ",
+      "author": "Nathalie Nasr"
+    },
+    {
+      "starNumber": 4,
+      "feedback": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Risus quis varius quam quisque id. Morbi quis commodo odio aenean sed adipiscing diam donec adipiscing. Ultricies tristique nulla aliquet enim tortor at auctor urna nunc. Volutpat commodo sed egestas egestas fringilla phasellus faucibus. Lobortis feugiat vivamus at augue. Ac auctor augue mauris augue neque gravida in fermentum. Neque gravida in fermentum et sollicitudin ac orci. Aliquam etiam erat velit scelerisque in dictum non. Ac orci phasellus egestas tellus rutrum. ",
+      "author": "Rosa Ayyash"
+    },
+    {
+      "starNumber": 5,
+      "feedback": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Risus quis varius quam quisque id. Morbi quis commodo odio aenean sed adipiscing diam donec adipiscing. Ultricies tristique nulla aliquet enim tortor at auctor urna nunc. Volutpat commodo sed egestas egestas fringilla phasellus faucibus. Lobortis feugiat vivamus at augue. Ac auctor augue mauris augue neque gravida in fermentum. Neque gravida in fermentum et sollicitudin ac orci. Aliquam etiam erat velit scelerisque in dictum non. Ac orci phasellus egestas tellus rutrum.",
+      "author": "Ramez Ayyash"
+    },
+    {
+      "starNumber": 5,
+      "feedback": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Risus quis varius quam quisque id. Morbi quis commodo odio aenean sed adipiscing diam donec adipiscing. Ultricies tristique nulla aliquet enim tortor at auctor urna nunc. Volutpat commodo sed egestas egestas fringilla phasellus faucibus. Lobortis feugiat vivamus at augue. Ac auctor augue mauris augue neque gravida in fermentum. Neque gravida in fermentum et sollicitudin ac orci. Aliquam etiam erat velit scelerisque in dictum non. Ac orci phasellus egestas tellus rutrum.",
+      "author": "Rita Ayyash"
     }
   ],
   "slideShow": [

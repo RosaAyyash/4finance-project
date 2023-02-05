@@ -1,0 +1,41 @@
+@font-face {
+  font-family: "Poppins-light";
+  src: url("C:\Users\Digitask\Desktop\Test Project\my-app\src\assets\fonts\Poppins-Light.ttf");
+}
+
+.footer-container {
+  height: 15vh;
+  background-color: rgb(235, 115, 97);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.contact-us-information {
+  font-size: 15px;
+  font-weight: 100;
+  color: white;
+}
+
+.contact-us-information:hover {
+  cursor: pointer;
+}
+
+.whatsapp-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-footer {
+  width: 70px;
+}
+
+.social-media-icon {
+  width: 40px;
+  height: 40px;
+  margin: 5px;
+}
+
+.social-media-icon:hover {
+  cursor: pointer;
+}

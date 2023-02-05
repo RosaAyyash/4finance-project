@@ -2,17 +2,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: fixed;
+  position: relative;
   z-index: 10;
   width: 100%;
-  /* color: rgb(255, 240, 229);
-  height: 10px; */
+  margin-bottom: 10px;
 }
 
 .logo-image {
-  width: 70px;
-  height: 70px;
-  margin: 10px 20px;
+  width: 80px;
+  height: 80px;
+  margin: 30px 20px;
 }
 
 .logo-image {
@@ -23,12 +22,14 @@
 }
 .nav-bar-item {
   list-style: none;
-  color: black;
-  padding: 0 15px;
+  font-size: 18px;
+  color: rgb(235, 114, 97);
+  font-weight: 600;
+  padding: 0 30px;
 }
 
 .nav-bar-item:hover {
-  color: white;
+  color: black;
   cursor: pointer;
 }
 

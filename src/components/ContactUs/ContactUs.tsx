@@ -1,81 +1,61 @@
+import { TextField } from "@mui/material";
 import "./ContactUs.css";
 
-//Social Media Icons
-import Instagram from "../../assets/SocialMediaIcons/instagram.png";
-import Facebook from "../../assets/SocialMediaIcons/facebook.png";
-import WhatsApp from "../../assets/SocialMediaIcons/whatsapp.png";
-import LinkedIn from "../../assets/SocialMediaIcons/linkedin.png";
-import Location from "../../assets/SocialMediaIcons/periscope.png";
+//Images
+import Location from "../../assets/Location.png";
 
-//From Libraries
-import { useNavigate } from "react-router";
-import { HashLink } from "react-router-hash-link";
+// import { makeStyles } from "@material-ui/core/styles";
+// const useStyles: any = makeStyles({
+//   root: {
+//     "& .MuiOutlinedInput-root": {
+//       "&.Mui-focused fieldset": {
+//         borderColor: "rgb(235, 114, 97)",
+//       },
+//     },
+//     "& .MuiOutlinedInput-notchedOutline": {
+//       "&.Mui-focused": {
+//         borderColor: "rgb(235, 114, 97)",
+//       },
+//     },
+//   },
+// });
 
 function ContactUs() {
-  const navigate = useNavigate();
-
+  //   const classes = useStyles();
   return (
-    <div className="contact-us-container" id="contact-us">
-      <div className="contact-us-information">
-        <h2>4Finance Training Center</h2>
-        <h4>Since 2013 | All Rights Reserved</h4>
+    <div className="contact-us-visit-us-container">
+      <div className="contact-us-container">
+        <h1 className="section-title">Contact Us</h1>
+        <TextField
+          label="Full Name"
+          variant="outlined"
+          className="text-field-contact-us"
+        />
+        <TextField
+          label="Email"
+          variant="outlined"
+          className="text-field-contact-us"
+        />
+        <TextField
+          label="Type your message here"
+          variant="outlined"
+          className="text-field-contact-us"
+        />
+        <span className="submit-button">Submit</span>
       </div>
 
-      <ul className="pages-shortcut">
-        <HashLink to="/#about-us" className="page-shortcut-hash-link">
-          <li className="page-shortcut">About Us</li>
-        </HashLink>
-        <li className="page-shortcut" onClick={() => navigate("/courses")}>
-          Our Courses
-        </li>
-        <li className="page-shortcut" onClick={() => navigate("/instructors")}>
-          Our Instructors
-        </li>
-        <HashLink to="#calendar" className="page-shortcut-hash-link">
-          <li className="page-shortcut">Academic Calendar</li>
-        </HashLink>
-      </ul>
-
-      <div className="social-media-container">
+      <div className="visit-us-container">
+        <h1 className="section-title">Visit Us</h1>
         <img
-          src={Instagram}
-          alt="Instragram"
-          onClick={() =>
-            window.open(
-              "https://instagram.com/4_finance_?igshid=YmMyMTA2M2Y=",
-              "_blank"
-            )
-          }
-          className="social-media-icon"
-        />
-        <img
-          className="social-media-icon"
-          src={Facebook}
-          alt="Facebook"
-          onClick={() =>
-            window.open(
-              "https://www.facebook.com/HB4Finance?mibextid=ZbWKwL",
-              "_blank"
-            )
-          }
-        />
-        <img
-          className="social-media-icon"
-          src={WhatsApp}
-          alt="WhatsApp"
-          onClick={() => window.open("https://wa.me/96176969036", "_blank")}
-        />
-        <img
-          className="social-media-icon"
-          src={LinkedIn}
-          alt="LinkedIn"
-          onClick={() => window.open("", "_blank")}
-        />
-        <img
-          className="social-media-icon"
+          className="map-image"
           src={Location}
-          alt="Location"
-          onClick={() => window.open("", "_blank")}
+          alt="4Finance Location"
+          onClick={() =>
+            window.open(
+              "https://www.google.com/maps/place/33%C2%B040'29.8%22N+35%C2%B035'32.4%22E/@33.6747365,35.5836558,15z/data=!4m4!3m3!8m2!3d33.6749534!4d35.5923423?hl=en",
+              "_blank"
+            )
+          }
         />
       </div>
     </div>
