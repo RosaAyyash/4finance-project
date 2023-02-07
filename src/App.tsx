@@ -3,6 +3,7 @@ import { createTheme, ThemeProvider } from "@mui/material";
 import { Route, Routes } from "react-router";
 import { BrowserRouter } from "react-router-dom";
 import "./App.css";
+import Header from "./components/Header/Header";
 
 //Pages
 import CoursePage from "./pages/CoursePage/CoursePage";
@@ -20,6 +21,7 @@ function App() {
   return (
     <ThemeProvider theme={THEME}>
       <BrowserRouter>
+        <Header />
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="/instructors" element={<InstructorPage />} />

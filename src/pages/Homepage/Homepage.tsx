@@ -12,7 +12,6 @@ import ContactUs from "../../components/ContactUs/ContactUs";
 function Homepage() {
   return (
     <div>
-      <Header />
       <MainImage />
       <AboutUs />
       <CoursesSection />

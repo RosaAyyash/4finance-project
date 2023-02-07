@@ -21,7 +21,6 @@ function CoursesPage() {
 
   return (
     <div>
-      <Header />
       <h1 className="page-title">Our Courses</h1>
       <div className="courses-container">
         {courses.map((course: any, index: number) => (

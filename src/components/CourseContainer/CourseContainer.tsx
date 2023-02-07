@@ -1,4 +1,3 @@
-import { Button } from "@mui/material";
 import "./CourseContainer.css";
 
 type CourseContainerProps = {
@@ -23,7 +22,6 @@ function CourseContainer(props: CourseContainerProps) {
             alt={props.name}
             className="selected-course-image"
           />
-          <Button variant="contained">Enroll Now</Button>
         </div>
         <div className="left-side-content">
           <h1 className="course-title">{props.name}</h1>

@@ -20,7 +20,7 @@ function CoursesSection() {
   };
 
   return (
-    <div>
+    <div id="courses">
       <>
         <h1 className="section-title">Our Courses</h1>
         <div className="course-cards-large-container">

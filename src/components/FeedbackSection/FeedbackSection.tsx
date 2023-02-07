@@ -20,7 +20,7 @@ function FeedbackSection() {
     setDisplayed(displayed + 1);
   };
   return (
-    <div className="feedback-section-container">
+    <div className="feedback-section-container" id="feedbacks">
       <h1 className="section-title">Feedbacks</h1>
       <div className="feedback-section-carousel">
         <>

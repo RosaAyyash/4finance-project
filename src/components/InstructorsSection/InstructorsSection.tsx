@@ -22,7 +22,7 @@ function InstructorsSection() {
   };
 
   return (
-    <div className="instructors-section-container">
+    <div className="instructors-section-container" id="instructors">
       <h1 className="section-title">Our Instructors</h1>
       <div className="instructor-cards-container">
         <>

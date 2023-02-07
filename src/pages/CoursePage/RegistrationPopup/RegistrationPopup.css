@@ -1,0 +1,49 @@
+.registration-popup-overlay {
+  position: fixed;
+  background-color: rgba(241, 237, 237, 0.8);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.registration-popup-content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 750px;
+  height: 500px;
+  background-color: rgb(241, 237, 237);
+  border: 5px solid rgb(235, 114, 97);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.registration-text-input {
+  margin: 10px !important;
+}
+
+.note {
+  font-family: "Poppins-light";
+  font-size: 12px;
+  margin-top: 25px;
+}
+
+.buttons-container {
+  display: flex;
+  margin-top: 15px;
+  justify-content: center;
+}
+.popup-button {
+  width: 150px;
+  font-size: 14px;
+  background-color: rgb(235, 114, 97);
+  margin: 0 10px;
+  padding: 8px 5px;
+}
+
+.popup-button:hover {
+  cursor: pointer;
+  background-color: rgb(206, 81, 64);
+}
