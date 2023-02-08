@@ -43,7 +43,6 @@ function InstructorPage() {
         />
       ) : null}
       <div>
-        <Header />
         <div className="instructor-page-container">
           <h1 className="page-title">Meet Our Instructors!</h1>
           <div

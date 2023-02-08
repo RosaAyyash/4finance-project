@@ -5,7 +5,7 @@
 
 .main-image {
   width: 90%;
-  height: 450px;
+  height: auto;
   border-radius: 25px;
   border-top-right-radius: 100px;
 }
@@ -47,4 +47,217 @@
 .button:hover {
   cursor: pointer;
   background-color: rgb(206, 81, 64);
+}
+
+@media only screen and (max-width: 950px) {
+  .main-image {
+    border-radius: 25px;
+    border-top-right-radius: 100px;
+  }
+
+  .main-image-title1 {
+    font-size: 35px;
+    margin: 5px 0;
+  }
+
+  .main-image-title2 {
+    font-size: 45px;
+    margin: 5px 0;
+  }
+
+  .button {
+    font-size: 18px;
+    width: 250px;
+    border-radius: 9px;
+    width: 300px;
+    height: 40px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .main-image {
+    border-radius: 25px;
+    border-top-right-radius: 80px;
+  }
+
+  .main-image-title1 {
+    font-size: 32px;
+    margin: 5px 0;
+  }
+
+  .main-image-title2 {
+    font-size: 42px;
+    margin: 5px 0;
+  }
+
+  .button {
+    font-size: 16px;
+    width: 220px;
+    border-radius: 9px;
+    height: 35px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .main-image {
+    border-radius: 22px;
+    border-top-right-radius: 60px;
+  }
+
+  .main-image-title1 {
+    font-size: 28px;
+    margin: 3px 0;
+  }
+
+  .main-image-title2 {
+    font-size: 38px;
+    margin: 3px 0;
+  }
+
+  .button {
+    font-size: 14px;
+    width: 200px;
+    border-radius: 9px;
+    height: 30px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .main-image {
+    border-radius: 18px;
+    border-top-right-radius: 50px;
+  }
+
+  .main-image-title1 {
+    font-size: 25px;
+    margin: 3px 0;
+  }
+
+  .main-image-title2 {
+    font-size: 32px;
+    margin: 3px 0;
+  }
+
+  .button {
+    font-size: 12px;
+    width: 180px;
+    border-radius: 7px;
+    height: 27px;
+  }
+}
+
+@media only screen and (max-width: 630px) {
+  .main-image {
+    border-radius: 15px;
+    border-top-right-radius: 45px;
+  }
+
+  .main-image-title1 {
+    font-size: 22px;
+    margin: 2px 0;
+  }
+
+  .main-image-title2 {
+    font-size: 28px;
+    margin: 2px 0;
+  }
+
+  .button {
+    font-size: 11px;
+    width: 160px;
+    border-radius: 7px;
+    height: 25px;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .main-image-content {
+    top: 50%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+    margin-bottom: 30px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .main-image-content {
+    top: 50%;
+    left: 33%;
+    transform: translate(-50%, -50%);
+    margin-bottom: 30px;
+  }
+
+  .main-image {
+    border-radius: 12px;
+    border-top-right-radius: 40px;
+  }
+
+  .main-image-title1 {
+    font-size: 18px;
+    margin: 2px 0;
+  }
+
+  .main-image-title2 {
+    font-size: 24px;
+    margin: 2px 0;
+  }
+
+  .button {
+    font-size: 10px;
+    width: 150px;
+    border-radius: 5px;
+    height: 24px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .main-image-content {
+    top: 50%;
+    left: 33%;
+    transform: translate(-50%, -50%);
+    margin-bottom: 30px;
+  }
+
+  .main-image {
+    width: 95%;
+
+    border-radius: 12px;
+    border-top-right-radius: 40px;
+  }
+
+  .main-image-title1 {
+    font-size: 16px;
+    margin: 1px 0;
+  }
+
+  .main-image-title2 {
+    font-size: 21px;
+    margin: 1px 0;
+  }
+
+  .button {
+    font-size: 10px;
+    width: 130px;
+    border-radius: 5px;
+    height: 24px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .main-image-title1 {
+    font-size: 14px;
+    margin: 1px 0;
+  }
+
+  .main-image-title2 {
+    font-size: 19px;
+    margin: 1px 0;
+  }
+
+  .button {
+    font-size: 9px;
+    width: 100px;
+    border-radius: 4px;
+    height: 20px;
+  }
 }

@@ -45,19 +45,15 @@ function RegistrationPopup(props: RegistrationPopupProps) {
   //     window.open(`whatsapp://send?text=${encodedMessage}`);
   //   };
 
+  //   const [isCopied, setCopied] = useState(false);
+
   const copyTextToClipboard = (text: string) => {
     navigator.clipboard.writeText(text);
+    dispatch(setMessage("success", "You fetched all the teachers succesfully"));
   };
-
-  const [isCopied, setCopied] = useState(false);
 
   return (
     <>
-      {isCopied
-        ? dispatch(
-            setMessage("success", "You fetched all the teachers succesfully")
-          )
-        : null}
       <div className="registration-popup-container">
         <div
           className="registration-popup-overlay"
@@ -130,7 +126,7 @@ function RegistrationPopup(props: RegistrationPopupProps) {
             </div>
             <div
               className="popup-button"
-              onClick={() => [copyTextToClipboard(message), setCopied(true)]}
+              onClick={() => copyTextToClipboard(message)}
             >
               Copy Message
             </div>

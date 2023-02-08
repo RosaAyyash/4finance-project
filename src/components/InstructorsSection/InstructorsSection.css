@@ -8,3 +8,7 @@
   height: 50px;
   margin: 50px;
 }
+
+.arrow-vector:hover {
+  cursor: pointer;
+}
