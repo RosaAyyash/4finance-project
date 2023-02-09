@@ -1,8 +1,6 @@
 import "./CoursesSection.css";
 import data from "../../data.json";
 import CourseCard from "../CourseCard/CourseCard";
-import { Button } from "@mui/material";
-import { useNavigate } from "react-router";
 
 import { useState } from "react";
 

@@ -1,14 +1,25 @@
 import "./AboutUs.css";
 import VerticalLine from "../../assets/Vectors/Vector 2.png";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function AboutUs() {
   const [readMore, setReadMore] = useState(false);
 
+  const [width, setWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleWindowResize = () => setWidth(window.innerWidth);
+    window.addEventListener("resize", handleWindowResize);
+
+    return () => {
+      window.removeEventListener("resize", handleWindowResize);
+    };
+  }, []);
+
   return (
     <div className="about-us-container" id="about-us">
       <h1 className="about-us-title">About Us</h1>
-      <img src={VerticalLine} />
+      {width > 900 ? <img src={VerticalLine} /> : null}
       <div className="about-us-paragraphs">
         <p className="about-us-text">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

@@ -9,7 +9,7 @@ function Header() {
   const navigate = useNavigate();
 
   //hamburger useState
-  const [isHamburger, setHambuger] = useState(true);
+  const [isHamburger, setHambuger] = useState(false);
   const handleOnHamburgerClick = () => {
     setHambuger(!isHamburger);
   };
