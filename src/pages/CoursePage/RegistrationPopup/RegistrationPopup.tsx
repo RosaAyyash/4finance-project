@@ -1,7 +1,8 @@
 import { TextField } from "@mui/material";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { setMessage } from "../../../store/actions/messageAction";
+import CopiedPopup from "./CopiedPopup/CopiedPopup";
 import "./RegistrationPopup.css";
 
 type RegistrationPopupProps = {
@@ -9,35 +10,117 @@ type RegistrationPopupProps = {
   closePopup: any;
 };
 
+type User = {
+  name: string;
+  fatherName: string;
+  age: number;
+  email: string;
+  phoneNumber: number;
+  address: string;
+  major: string;
+  course?: string;
+};
+
 function RegistrationPopup(props: RegistrationPopupProps) {
   const dispatch = useDispatch<any>();
-  //entered value by the user
-  const [name, setName] = useState("");
-  const [fatherName, setFatherName] = useState("");
-  const [age, setAge] = useState("");
-  const [email, setEmail] = useState("");
-  const [phoneNumber, setPhoneNumber] = useState("");
-  const [address, setAddress] = useState("");
-  const [major, setMajor] = useState("");
-  const course = props.courseName;
+
+  const [user, setUser] = useState<User>({
+    name: "",
+    fatherName: "",
+    age: 0,
+    email: "",
+    phoneNumber: 0,
+    address: "",
+    major: "",
+    course: props.courseName,
+  });
+
+  const handleOnNameChange = (event: any) => {
+    let value = event.target.value;
+    setUser({ ...user, name: value });
+  };
+
+  const handleOnFatherNameChange = (event: any) => {
+    let value = event.target.value;
+    setUser({ ...user, fatherName: value });
+  };
+
+  const handleOnAgeChange = (event: any) => {
+    let value = event.target.value;
+    setUser({ ...user, age: value });
+  };
+
+  const handleOnEmailChange = (event: any) => {
+    let value = event.target.value;
+    setUser({ ...user, email: value });
+  };
+
+  const handleOnPhoneNumberChange = (event: any) => {
+    let value = event.target.value;
+    setUser({ ...user, phoneNumber: value });
+  };
+
+  const handleOnAddressChange = (event: any) => {
+    let value = event.target.value;
+    setUser({ ...user, address: value });
+  };
+
+  const handleOnMajorChange = (event: any) => {
+    let value = event.target.value;
+    setUser({ ...user, major: value });
+  };
+
+  const [isSaveButtonDisabled, setSaveButtonDisabled] = useState(false);
+
+  function ValidateEmail(mail: string) {
+    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail)) {
+      return true;
+    }
+
+    return false;
+  }
+
+  const validator = () => {
+    if (
+      user.name === "" ||
+      user.fatherName === "" ||
+      user.age === null ||
+      user.age <= 0 ||
+      user.email === "" ||
+      user.phoneNumber === null ||
+      user.phoneNumber <= 0 ||
+      user.address === "" ||
+      user.major === ""
+    ) {
+      setSaveButtonDisabled(true);
+    } else if (!ValidateEmail(user.email)) {
+      setSaveButtonDisabled(true);
+    } else {
+      setSaveButtonDisabled(false);
+    }
+  };
+
+  useEffect(() => {
+    validator();
+  }, [user]);
 
   const message =
     "Hello, my name is " +
-    name +
+    user.name +
     " " +
-    fatherName +
+    user.fatherName +
     ". I am " +
-    age +
+    user.age +
     " years old. My email is: " +
-    email +
+    user.email +
     ", my phone number is " +
-    phoneNumber +
+    user.phoneNumber +
     ". My address is: " +
-    address +
+    user.address +
     " .I am studying " +
-    major +
+    user.major +
     " and I would like to register for the " +
-    course +
+    user.course +
     " course provided at 4finance training center.";
 
   //   const handleClick = () => {
@@ -45,15 +128,33 @@ function RegistrationPopup(props: RegistrationPopupProps) {
   //     window.open(`whatsapp://send?text=${encodedMessage}`);
   //   };
 
-  //   const [isCopied, setCopied] = useState(false);
+  const [isCopied, setCopied] = useState(false);
 
   const copyTextToClipboard = (text: string) => {
     navigator.clipboard.writeText(text);
-    dispatch(setMessage("success", "You fetched all the teachers succesfully"));
+    // dispatch(setMessage("success", "Successfuly Copied!"));
   };
+
+  const handleOnCopyButton = () => {
+    copyTextToClipboard(message);
+    setCopied(true);
+  };
+
+  const closePopup = () => {
+    setCopied(false);
+  };
+
+  const scrollOnTop = () => {
+    window.scroll(0, 0);
+  };
+  useEffect(() => {
+    scrollOnTop();
+  }, []);
 
   return (
     <>
+      {isCopied ? <CopiedPopup closePopup={closePopup} /> : null}
+
       <div className="registration-popup-container">
         <div
           className="registration-popup-overlay"
@@ -65,50 +166,50 @@ function RegistrationPopup(props: RegistrationPopupProps) {
             label="First Name"
             variant="outlined"
             className="registration-text-input"
-            value={name}
-            onChange={(event) => setName(event.target.value)}
+            value={user.name}
+            onChange={handleOnNameChange}
           ></TextField>
           <TextField
             label="Father's Full Name"
             variant="outlined"
             className="registration-text-input"
-            value={fatherName}
-            onChange={(event) => setFatherName(event.target.value)}
+            value={user.fatherName}
+            onChange={handleOnFatherNameChange}
           ></TextField>
           <TextField
             label="Email"
             variant="outlined"
             className="registration-text-input"
-            value={email}
-            onChange={(event) => setEmail(event.target.value)}
+            value={user.email}
+            onChange={handleOnEmailChange}
           ></TextField>
           <TextField
             label="Phone Number"
             variant="outlined"
             className="registration-text-input"
-            value={phoneNumber}
-            onChange={(event) => setPhoneNumber(event.target.value)}
+            value={user.phoneNumber}
+            onChange={handleOnPhoneNumberChange}
           ></TextField>
           <TextField
             label="Age"
             variant="outlined"
             className="registration-text-input"
-            value={age}
-            onChange={(event) => setAge(event.target.value)}
+            value={user.age}
+            onChange={handleOnAgeChange}
           ></TextField>
           <TextField
             label="Address"
             variant="outlined"
             className="registration-text-input"
-            value={address}
-            onChange={(event) => setAddress(event.target.value)}
+            value={user.address}
+            onChange={handleOnAddressChange}
           ></TextField>
           <TextField
             label="Major"
             variant="outlined"
             className="registration-text-input"
-            value={major}
-            onChange={(event) => setMajor(event.target.value)}
+            value={user.major}
+            onChange={handleOnMajorChange}
           ></TextField>
           <TextField
             label="Course"
@@ -124,18 +225,26 @@ function RegistrationPopup(props: RegistrationPopupProps) {
             <div className="popup-button" onClick={props.closePopup}>
               Cancel
             </div>
-            <div
-              className="popup-button"
-              onClick={() => copyTextToClipboard(message)}
-            >
-              Copy Message
-            </div>
-            <div
-              className="popup-button"
-              onClick={() => window.open("https://wa.me/96176969036", "_blank")}
-            >
-              Open Whatsapp
-            </div>
+            {isSaveButtonDisabled ? (
+              <div className="popup-button-disabled">Copy Message</div>
+            ) : (
+              <div className="popup-button" onClick={handleOnCopyButton}>
+                Copy Message
+              </div>
+            )}
+
+            {isSaveButtonDisabled ? (
+              <div className="popup-button-disabled">Open Whatsapp</div>
+            ) : (
+              <div
+                className="popup-button"
+                onClick={() =>
+                  window.open("https://wa.me/96176969036", "_blank")
+                }
+              >
+                Open Whatsapp
+              </div>
+            )}
           </div>
         </div>
       </div>

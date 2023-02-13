@@ -3,49 +3,55 @@ import "./ContactUs.css";
 
 //Images
 import Location from "../../assets/Location.png";
-
-// import { makeStyles } from "@material-ui/core/styles";
-// const useStyles: any = makeStyles({
-//   root: {
-//     "& .MuiOutlinedInput-root": {
-//       "&.Mui-focused fieldset": {
-//         borderColor: "rgb(235, 114, 97)",
-//       },
-//     },
-//     "& .MuiOutlinedInput-notchedOutline": {
-//       "&.Mui-focused": {
-//         borderColor: "rgb(235, 114, 97)",
-//       },
-//     },
-//   },
-// });
+import { useState } from "react";
 
 function ContactUs() {
-  //   const classes = useStyles();
+  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  const sendEmail = (subject: string, body: any) => {
+    const emailLink = `mailto:rozie.ayyash2002@gmail.com?subject=${encodeURIComponent(
+      subject
+    )}&body=${encodeURIComponent(body)}`;
+    window.location.href = emailLink;
+  };
+
   return (
     <div className="contact-us-visit-us-container">
       <div className="contact-us-container">
-        <h1 className="section-title">Contact Us</h1>
+        <h1 className="sub-section-title">Contact Us</h1>
         <TextField
           label="Full Name"
           variant="outlined"
           className="text-field-contact-us"
+          value={username}
+          onChange={(event) => setUsername(event.target.value)}
         />
         <TextField
           label="Email"
           variant="outlined"
           className="text-field-contact-us"
+          value={email}
+          onChange={(event) => setEmail(event.target.value)}
         />
         <TextField
           label="Type your message here"
           variant="outlined"
           className="text-field-contact-us"
+          value={message}
+          onChange={(event) => setMessage(event.target.value)}
         />
-        <span className="submit-button">Submit</span>
+        <span
+          className="submit-button"
+          onClick={() => sendEmail(username, message)}
+        >
+          Submit
+        </span>
       </div>
 
       <div className="visit-us-container">
-        <h1 className="section-title">Visit Us</h1>
+        <h1 className="sub-section-title">Visit Us</h1>
         <img
           className="map-image"
           src={Location}

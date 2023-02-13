@@ -1,0 +1,27 @@
+.copied-popup-overlay {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 20;
+  background-color: rgba(241, 237, 237, 0.5);
+}
+
+.copied-pop-up-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 80px;
+  background-color: white;
+  border-radius: 5px;
+  font-family: "Poppins-light";
+  font-size: 16px;
+  color: rgb(133, 130, 130);
+  z-index: 100;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: fixed;
+}

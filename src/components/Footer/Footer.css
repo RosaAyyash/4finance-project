@@ -30,6 +30,11 @@
   width: 70px;
 }
 
+.social-media-container {
+  display: flex;
+  align-items: center;
+}
+
 .social-media-icon {
   width: 40px;
   height: 40px;
@@ -38,4 +43,78 @@
 
 .social-media-icon:hover {
   cursor: pointer;
+}
+
+@media only screen and (max-width: 900px) {
+  .contact-us-information {
+    font-size: 13px;
+    font-weight: 100;
+    color: white;
+  }
+
+  .logo-footer {
+    width: 60px;
+  }
+
+  .social-media-icon {
+    width: 34px;
+    height: 34px;
+    margin: 5px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .footer-container {
+    bottom: 0;
+    height: 25vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .contact-us-information {
+    font-size: 13px;
+    font-weight: 100;
+    color: white;
+  }
+
+  .logo-footer {
+    width: 60px;
+    display: none;
+  }
+
+  .social-media-icon {
+    width: 34px;
+    height: 34px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .footer-container {
+    height: 21vh;
+  }
+  .contact-us-information {
+    font-size: 11px;
+    font-weight: 100;
+    color: white;
+  }
+  .social-media-icon {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .footer-container {
+    height: 18vh;
+  }
+  .contact-us-information {
+    font-size: 10px;
+    font-weight: lighter;
+    color: white;
+  }
+  .social-media-icon {
+    width: 26px;
+    height: 26px;
+  }
 }

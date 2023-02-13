@@ -31,6 +31,9 @@ function Header() {
 
   return (
     <div className="header-container" id="header">
+      {isHamburger ? (
+        <div className="header-overlay" onClick={closeHamburger}></div>
+      ) : null}
       <img
         src={Logo}
         alt="4Finance Logo"

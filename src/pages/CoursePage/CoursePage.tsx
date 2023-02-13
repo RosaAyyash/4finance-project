@@ -4,7 +4,7 @@ import data from "../../data.json";
 
 //Librairies
 import { useParams } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import RegistrationPopup from "./RegistrationPopup/RegistrationPopup";
 
 function CoursePage() {
@@ -20,6 +20,13 @@ function CoursePage() {
   const closePopup = () => {
     setRegistrationPopup(false);
   };
+
+  const scrollOnTop = () => {
+    window.scroll(0, 0);
+  };
+  useEffect(() => {
+    scrollOnTop();
+  }, []);
 
   return (
     <>

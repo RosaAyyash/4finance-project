@@ -6,19 +6,41 @@ import ProfileCard from "../ProfileCard/ProfileCard";
 import LeftArrow from "../../assets/Vectors/Polygon 1.png";
 import RightArrow from "../../assets/Vectors/Polygon 2.png";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function InstructorsSection() {
   const instructors = data["instructors"];
 
-  const [displayed, setDisplayed] = useState(3);
+  const [displayed, setDisplayCount] = useState(3);
+  const [skips, setSkips] = useState(3);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 600) {
+        setDisplayCount(1);
+        setSkips(1);
+      } else if (window.innerWidth < 900) {
+        setDisplayCount(2);
+        setSkips(2);
+      } else {
+        setDisplayCount(3);
+        setSkips(3);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+    handleResize();
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   const handleLeftSwipe = () => {
-    setDisplayed(displayed - 1);
+    setDisplayCount(displayed - 1);
   };
 
   const handleRightSwipe = () => {
-    setDisplayed(displayed + 1);
+    setDisplayCount(displayed + 1);
   };
 
   return (
@@ -26,7 +48,7 @@ function InstructorsSection() {
       <h1 className="section-title">Our Instructors</h1>
       <div className="instructor-cards-container">
         <>
-          {displayed > 3 ? (
+          {displayed > skips ? (
             <img
               className="arrow-vector"
               src={LeftArrow}
@@ -38,17 +60,18 @@ function InstructorsSection() {
           )}
 
           {instructors
-            .slice(displayed - 3, displayed)
+            .slice(displayed - skips, displayed)
             .map((instructor: any, index: number) => (
-              <ProfileCard
-                id={instructor.id}
-                key={index}
-                name={instructor.name}
-                email={instructor.email}
-                image={instructor.image}
-                phoneNumber={instructor.phoneNumber}
-                speciality={instructor.speciality}
-              />
+              <div key={index}>
+                <ProfileCard
+                  id={instructor.id}
+                  name={instructor.name}
+                  email={instructor.email}
+                  image={instructor.image}
+                  phoneNumber={instructor.phoneNumber}
+                  speciality={instructor.speciality}
+                />
+              </div>
             ))}
           {displayed < instructors.length ? (
             <img
